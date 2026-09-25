@@ -1,143 +1,63 @@
 <div align="center">
 
-# Anamnesic
+# Anamnesic Labs
 
-### Building the future of AI-native Software Engineering.
+### Open-source AI systems engineering & hardware inference R&D.
 
-Software should be able to understand, improve and evolve itself.
+*Making modern language models run where they were never supposed to.*
 
 ---
 
-[Website](https://nousengineer.com) •
-[Documentation](https://docs.nousengineer.com) •
-[GitHub](https://github.com/nousengineer)
+[![ChronoKairo](https://img.shields.io/badge/Maintained%20by-ChronoKairo-blue?style=flat-square)](https://github.com/chronokairo)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green?style=flat-square)](https://opensource.org/licenses/MIT)
 
 </div>
 
 ---
 
-## About
+## 🔭 About Anamnesic Labs
 
-**Nous Engineer** is the open-source project behind **Nous** — an AI-native
-engineering platform built and maintained by
-[ChronoKairo](https://github.com/chronokairo).
+**Anamnesic Labs** is the open-source and applied research arm maintained by **[ChronoKairo](https://github.com/chronokairo)**. 
 
-We believe the future of software isn't just writing code faster—it's creating
-systems that can understand projects, reason about architecture, automate
-engineering tasks, and continuously improve themselves.
+While enterprise products and commercial agent runtimes operate under the ChronoKairo ecosystem, Anamnesic Labs focuses on **extreme edge AI**, low-level systems engineering, and hardware democratization:
 
-Our goal is to empower developers with AI that acts as an engineering partner
-rather than just a code generator.
+1. **AI on Constrained & Abandoned Hardware**: Exploring ways to run modern transformers and hybrid SSMs (Llama 3, SmolLM2, Qwen 3.5, DeltaNet) on legacy GPUs, integrated graphics, and memory-constrained devices.
+2. **Heterogeneous Compute**: Data-movement minimization, zero-copy unified memory pooling, and tensor-tiering across dGPUs, iGPUs, and host RAM.
+3. **Applied Systems R&D**: Implementations of cutting-edge literature in speculative decoding, quantization, and attention kernels.
 
 ---
 
-## Nous
+## 🔬 Active Research Repositories
 
-Nous is a single platform composed of independent components that work together
-but can be used separately:
-
-| Component | Role |
-|-----------|------|
-| **[nous](https://github.com/nousengineer/nous)** | Core platform — runtime (`riluvi`), SDK, multi-tenant server, and editor LLM bridges |
-| **nous-runtime** | OpenCL inference backend for legacy GPUs (GGUF runtime + kernels) |
-| **[nous-coder](https://github.com/nousengineer/nous-coder)** | Rust coding agent — plan/act/verify loop with local LLM (Ollama) |
-| **nous-desktop** | Desktop UI for the platform |
-| **nous-labs** | Applied research (FlashAttention, speculative decoding, etc.) |
-| **nous-research** | Research notes on legacy GPU inference (Caicos XT) |
+| Repository | Scope & Focus | Tech Stack |
+| :--- | :--- | :--- |
+| **[`relic`](https://github.com/anamnesic/relic)** | Minimal, high-performance GGUF LLM runtime for OpenCL 1.2 & 3.0 devices (dGPU + iGPU + CPU). | Pure C, OpenCL, CMake |
+| **[`surveyor`](https://github.com/anamnesic/surveyor)** | Hardware profiling, device capabilities index, and quantization viability studies on legacy chips (Caicos XT, Terascale, etc.). | Markdown, Python, JSON |
+| **[`anamnesic-labs`](https://github.com/anamnesic/anamnesic-labs)** | Long-horizon applied research: FlashAttention kernels, speculative decoding verification, and MoE on limited VRAM. | C, OpenCL, PyTorch |
 
 ---
 
-## What We Build
+## 🏛️ Ecosystem Alignment
 
-🧠 **AI Agents**
-
-Specialized agents for software engineering, architecture, DevOps, security, documentation, testing and code quality.
-
-📚 **Knowledge Systems**
-
-Semantic understanding of repositories, documentation, APIs and infrastructure.
-
-⚡ **Developer Tools**
-
-AI-native tools that integrate directly into engineering workflows.
-
-🏗 **Engineering Infrastructure**
-
-Reusable platforms for automation, orchestration and intelligent software maintenance.
-
-🔬 **Research**
-
-Applied research in Large Language Models, autonomous agents, software engineering and developer experience.
+Core applications and agent platforms originally incubated in Anamnesic have graduated to the ChronoKairo official suites:
+- **Tool-calling scaffolding & SLM reliability (`clamp`)** → Consolidated into [`chronokairo-ai`](https://github.com/chronokairo/ai).
+- **IDE LLM Bridges & local servers** → Consolidated into [`chronokairo-ai/tools/llm-server`](https://github.com/chronokairo/ai).
+- **Sandboxed Agent Execution (`AegisOS`)** → Integrated into [`chronokairo-ai/tools/sandbox`](https://github.com/chronokairo/ai).
+- **Agent Memory & Context Engine** → Integrated into [`chronokairo-ai/tools/context`](https://github.com/chronokairo/ai).
+- **Project Intelligence & Risk Matrices** → Integrated into [`chronokairo-projects`](https://github.com/chronokairo/projects).
 
 ---
 
-## Our Principles
+## 📜 Principles
 
-- Think in decades, not quarters.
-- Build infrastructure before the market needs it.
-- Simplicity scales.
-- Context matters more than prompts.
-- Developers stay in control.
-- AI should amplify engineers—not replace them.
-- Continuous optimization is better than one-time automation.
-
----
-
-## Areas of Research
-
-- Artificial Intelligence
-- Software Engineering
-- Autonomous Agents
-- Multi-Agent Systems
-- Code Intelligence
-- Retrieval-Augmented Generation (RAG)
-- Vector Search
-- Knowledge Graphs
-- Developer Experience
-- Cloud Infrastructure
-
----
-
-## Technology
-
-We enjoy building with technologies such as:
-
-- TypeScript
-- Node.js
-- Rust
-- Python
-- Go
-- C++
-- Docker
-- Kubernetes
-- PostgreSQL
-- Redis
-- OpenCL
-- MCP
-- Large Language Models
-
----
-
-## Open Source
-
-We believe that great engineering is built collaboratively.
-
-Community contributions, discussions and ideas are always welcome.
-
----
-
-## Vision
-
-We're building an ecosystem where software teams spend less time maintaining systems and more time creating value.
-
-The future belongs to software that can learn, reason and improve continuously.
+- **Zero-Waste Hardware**: Hardware is only obsolete if the software gives up on it.
+- **Data Movement is the Bottleneck**: Arithmetic is cheap; moving bytes across the bus is expensive.
+- **Open Science & Open Systems**: Foundational low-level runtimes and hardware research are shared openly with the developer community.
 
 ---
 
 <div align="center">
 
-### Build software that builds better software.
-
-An open-source project by **[ChronoKairo](https://github.com/chronokairo)**
+An open-source initiative by **[ChronoKairo](https://github.com/chronokairo)**
 
 </div>
