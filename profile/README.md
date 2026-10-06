@@ -31,9 +31,9 @@ While enterprise products and commercial agent runtimes operate under the Chrono
 
 | Repository | Scope & Focus | Tech Stack |
 | :--- | :--- | :--- |
-| **[`relic`](https://github.com/anamnesic/relic)** | Minimal, high-performance GGUF LLM runtime for OpenCL 1.2 & 3.0 devices (dGPU + iGPU + CPU). | Pure C, OpenCL, CMake |
-| **[`surveyor`](https://github.com/anamnesic/surveyor)** | Hardware profiling, device capabilities index, and quantization viability studies on legacy chips (Caicos XT, Terascale, etc.). | Markdown, Python, JSON |
-| **[`anamnesic-labs`](https://github.com/anamnesic/anamnesic-labs)** | Long-horizon applied research: FlashAttention kernels, speculative decoding verification, and MoE on limited VRAM. | C, OpenCL, PyTorch |
+| **[`relic`](https://github.com/anamnesic/relic)** | Minimal, high-performance GGUF LLM runtime for OpenCL 1.2 & 3.0 devices (dGPU + iGPU + CPU). Hosts the org's hardware profiling notes ([`docs/hardware`](https://github.com/anamnesic/relic/tree/main/docs/hardware)) and research backlog ([`docs/`](https://github.com/anamnesic/relic/tree/main/docs)). | Pure C, OpenCL, CMake |
+
+> The former [`surveyor`](https://github.com/anamnesic/surveyor) (hardware profiling & feasibility notes) and [`anamnesic-labs`](https://github.com/anamnesic/anamnesic-labs) (applied research focus) repositories were absorbed into `relic/docs`.
 
 ---
 
